@@ -69,18 +69,10 @@ class TasksAdapter(var list: ArrayList<TaskModel>, private val iClicks: IClicks)
                 )
             }
         }
-
-
     }
 
     interface IClicks {
-        fun onItemClicked(taskId:Int)
+        fun onItemClicked(taskId: Int)
     }
 
-    fun addData(listItems: ArrayList<TaskModel>) {
-        val size = this.list.size
-        this.list.addAll(listItems)
-        val sizeNew = this.list.size
-        notifyItemRangeChanged(size, sizeNew)
-    }
 }
